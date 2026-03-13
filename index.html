@@ -16,125 +16,145 @@
 body{
 margin:0;
 font-family:Montserrat;
-background:white;
-color:#111;
-overflow-x:hidden;
+background:linear-gradient(180deg,#ffffff,#f7f9fc);
+color:#222;
 }
 
 section{
 min-height:100vh;
+padding:80px 10%;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-padding:80px 8%;
 }
 
 .hero{
-background:url(dellanno.jpg) center/cover no-repeat;
-color:white;
-}
 
-.overlay{
-background:rgba(0,0,0,0.6);
-padding:80px;
-border-radius:10px;
+background:linear-gradient(180deg,#ffffff,#eef3ff);
 text-align:center;
+
 }
 
 .title{
 font-family:"Playfair Display";
-font-size:70px;
+font-size:72px;
 margin-bottom:20px;
+color:#111;
 }
 
 .subtitle{
 font-size:28px;
-margin-bottom:40px;
+color:#555;
+margin-bottom:50px;
 }
 
 .logos{
+
 display:flex;
-justify-content:center;
 gap:80px;
+justify-content:center;
 flex-wrap:wrap;
+
 }
 
 .logos img{
-height:150px;
-transition:0.4s;
+
+height:160px;
+transition:0.5s;
+
 }
 
 .logos img:hover{
-transform:scale(1.15);
+
+transform:scale(1.2);
+
 }
 
 .section-title{
+
 font-family:"Playfair Display";
-font-size:48px;
+font-size:52px;
 margin-bottom:30px;
 text-align:center;
+
 }
 
 .description{
+
 font-size:20px;
 max-width:900px;
 text-align:center;
 margin-bottom:40px;
+color:#555;
+
 }
 
 .brands{
+
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
 gap:40px;
 width:100%;
+
 }
 
 .brand{
-box-shadow:0 15px 40px rgba(0,0,0,0.12);
+
 border-radius:10px;
+box-shadow:0 15px 35px rgba(0,0,0,0.1);
 overflow:hidden;
+background:white;
+
 }
 
 .brand img{
+
 width:100%;
-height:350px;
+height:360px;
 object-fit:cover;
+
 }
 
 .brand h3{
+
 padding:20px;
 font-size:26px;
+
 }
 
 .chart{
+
 width:100%;
 height:550px;
-}
 
-.dark{
-background:#f6f6f6;
 }
 
 .timeline{
+
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:40px;
 width:100%;
+
 }
 
 .year{
+
 background:white;
 padding:40px;
 border-radius:10px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 text-align:center;
+
 }
 
 .big-number{
-font-size:110px;
+
+font-size:120px;
 font-weight:900;
-color:#c89b5a;
+color:#d28c3c;
+
 }
 
 </style>
@@ -143,13 +163,16 @@ color:#c89b5a;
 
 <body>
 
+
 <!-- HERO -->
 
 <section class="hero">
 
-<div class="overlay">
+<div class="title">
 
-<div class="title">Propuesta Estratégica</div>
+Propuesta Estratégica
+
+</div>
 
 <div class="subtitle">
 
@@ -161,10 +184,10 @@ en Centroamérica y el Caribe
 <div class="logos">
 
 <img src="dycons.jpg">
-<img src="outwork.png">
-<img src="logo_dellanno.png">
 
-</div>
+<img src="outwork.png">
+
+<img src="logo_dellanno.png">
 
 </div>
 
@@ -175,11 +198,15 @@ en Centroamérica y el Caribe
 
 <section>
 
-<div class="section-title">Alianza Comercial Estratégica</div>
+<div class="section-title">
+
+Alianza Comercial Estratégica
+
+</div>
 
 <div class="description">
 
-DYCONS GROUP y OUTWORK presentan una propuesta estratégica para introducir las marcas de UNICASA en Costa Rica y República Dominicana mediante una estructura de representación comercial enfocada en proyectos residenciales, distribución especializada y desarrollo de showrooms.
+DYCONS GROUP y OUTWORK presentan una propuesta de expansión comercial para las marcas de UNICASA en Costa Rica y República Dominicana, enfocada en proyectos residenciales, showrooms especializados y desarrollo del mercado regional.
 
 </div>
 
@@ -188,9 +215,13 @@ DYCONS GROUP y OUTWORK presentan una propuesta estratégica para introducir las 
 
 <!-- MARCAS -->
 
-<section class="dark">
+<section>
 
-<div class="section-title">Portafolio de Marcas</div>
+<div class="section-title">
+
+Portafolio de Marcas UNICASA
+
+</div>
 
 <div class="brands">
 
@@ -223,15 +254,19 @@ DYCONS GROUP y OUTWORK presentan una propuesta estratégica para introducir las 
 </section>
 
 
-<!-- COSTOS -->
+<!-- COSTOS DE VENTA -->
 
 <section>
 
-<div class="section-title">Estructura de Costos de Importación</div>
+<div class="section-title">
+
+Estructura de Costos de Venta
+
+</div>
 
 <div class="description">
 
-Distribución porcentual basada en la estructura financiera real de operación logística e importación.
+Distribución logística de importación basada en la estructura financiera de la operación.
 
 </div>
 
@@ -240,33 +275,36 @@ Distribución porcentual basada en la estructura financiera real de operación l
 </section>
 
 
-<!-- MERCADO -->
-
-<section class="dark">
-
-<div class="section-title">Segmentación de Mercado</div>
-
-<div id="mercado" class="chart"></div>
-
-</section>
-
-
-<!-- PAISES -->
+<!-- ESTRUCTURA OPERATIVA -->
 
 <section>
 
-<div class="section-title">Comparación Operativa por País</div>
+<div class="section-title">
 
-<div id="paises" class="chart"></div>
+Estructura Operativa del Negocio
+
+</div>
+
+<div class="description">
+
+Distribución porcentual de los costos y utilidades dentro de la operación comercial.
+
+</div>
+
+<div id="estructura" class="chart"></div>
 
 </section>
 
 
 <!-- BUSINESS PLAN -->
 
-<section class="dark">
+<section>
 
-<div class="section-title">Business Plan 3 Años</div>
+<div class="section-title">
+
+Business Plan — 3 Años
+
+</div>
 
 <div class="timeline">
 
@@ -307,20 +345,30 @@ Consolidación regional
 
 <section>
 
-<div class="section-title">Compromiso Comercial</div>
+<div class="section-title">
 
-<div class="big-number">500+</div>
+Compromiso Comercial
+
+</div>
+
+<div class="big-number">
+
+500+
+
+</div>
 
 <div class="description">
 
-Objetivo mínimo anual de productos UNICASA combinando todas las marcas dentro de los mercados de Costa Rica y República Dominicana.
+Objetivo mínimo anual de unidades comercializadas combinando todas las marcas de UNICASA.
 
 </div>
 
 </section>
 
 
+
 <script>
+
 
 var costos = echarts.init(document.getElementById('costos'));
 
@@ -336,17 +384,17 @@ radius:['30%','70%'],
 
 data:[
 
-{value:33.17,name:'Mercadería (33.17%)'},
+{value:33,name:'Mercadería (Contenedor)'},
 
-{value:3.67,name:'Flete Internacional (3.67%)'},
+{value:4,name:'Flete Internacional'},
 
-{value:0.66,name:'Seguro Logístico (0.66%)'},
+{value:1,name:'Seguro Logístico 2%'},
 
-{value:3.75,name:'DAI Aranceles (3.75%)'},
+{value:4,name:'DAI Aranceles'},
 
-{value:0.38,name:'Ley 6946 (0.38%)'},
+{value:1,name:'Ley 6946'},
 
-{value:2.5,name:'Costos Portuarios (2.5%)'}
+{value:3,name:'Costos Portuarios'}
 
 ]
 
@@ -355,23 +403,32 @@ data:[
 });
 
 
-var mercado = echarts.init(document.getElementById('mercado'));
 
-mercado.setOption({
+var estructura = echarts.init(document.getElementById('estructura'));
+
+estructura.setOption({
+
+tooltip:{},
 
 series:[{
 
 type:'pie',
 
-radius:['30%','70%'],
+radius:['35%','70%'],
 
 data:[
 
-{value:45,name:'Casa Brasileira 45%'},
+{value:13,name:'Impuestos 13%'},
 
-{value:35,name:'The New 35%'},
+{value:7,name:'Mano de Obra 7%'},
 
-{value:20,name:'DellAnno 20%'}
+{value:44,name:'Utilidad Bruta 44%'},
+
+{value:11,name:'Arrendamientos 11%'},
+
+{value:13,name:'Otros Gastos 13%'},
+
+{value:24,name:'Utilidad de Operación 24%'}
 
 ]
 
@@ -379,30 +436,8 @@ data:[
 
 });
 
-
-var paises = echarts.init(document.getElementById('paises'));
-
-paises.setOption({
-
-tooltip:{},
-
-legend:{},
-
-xAxis:{type:'category',data:['Logística','Impuestos','Operación']},
-
-yAxis:{type:'value'},
-
-series:[
-
-{name:'Costa Rica',type:'bar',data:[7,12,10]},
-
-{name:'República Dominicana',type:'bar',data:[8,15,9]}
-
-]
-
-});
-
 </script>
+
 
 </body>
 
