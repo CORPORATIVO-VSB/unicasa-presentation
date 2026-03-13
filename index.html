@@ -4,10 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-
 <title>Propuesta Estratégica UNICASA</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 
@@ -16,177 +15,144 @@
 body{
 margin:0;
 font-family:Montserrat;
-background:linear-gradient(180deg,#ffffff,#f7f9fc);
-color:#222;
+background:linear-gradient(180deg,#ffffff,#f3f6fb);
+color:#1a1a1a;
+overflow-x:hidden;
 }
 
 section{
 min-height:100vh;
-padding:80px 10%;
+padding:90px 8%;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+text-align:center;
+}
+
+h1{
+font-family:Playfair Display;
+font-size:72px;
+margin-bottom:20px;
+}
+
+h2{
+font-family:Playfair Display;
+font-size:46px;
+margin-bottom:25px;
+}
+
+p{
+max-width:900px;
+font-size:20px;
+color:#555;
 }
 
 .hero{
-
 background:linear-gradient(180deg,#ffffff,#eef3ff);
-text-align:center;
-
-}
-
-.title{
-font-family:"Playfair Display";
-font-size:72px;
-margin-bottom:20px;
-color:#111;
-}
-
-.subtitle{
-font-size:28px;
-color:#555;
-margin-bottom:50px;
 }
 
 .logos{
-
 display:flex;
-gap:80px;
-justify-content:center;
+gap:100px;
 flex-wrap:wrap;
-
+justify-content:center;
+margin-top:60px;
 }
 
 .logos img{
-
-height:160px;
-transition:0.5s;
-
+height:180px;
+transition:.4s;
+filter:drop-shadow(0 10px 15px rgba(0,0,0,.2));
 }
 
 .logos img:hover{
-
 transform:scale(1.2);
-
-}
-
-.section-title{
-
-font-family:"Playfair Display";
-font-size:52px;
-margin-bottom:30px;
-text-align:center;
-
-}
-
-.description{
-
-font-size:20px;
-max-width:900px;
-text-align:center;
-margin-bottom:40px;
-color:#555;
-
 }
 
 .brands{
-
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
 gap:40px;
 width:100%;
-
+margin-top:50px;
 }
 
 .brand{
-
-border-radius:10px;
-box-shadow:0 15px 35px rgba(0,0,0,0.1);
-overflow:hidden;
 background:white;
-
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,.1);
 }
 
 .brand img{
-
 width:100%;
 height:360px;
 object-fit:cover;
-
 }
 
 .brand h3{
-
-padding:20px;
+padding:25px;
 font-size:26px;
-
 }
 
 .chart{
-
 width:100%;
-height:550px;
-
+height:600px;
+margin-top:40px;
 }
 
 .timeline{
-
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:40px;
 width:100%;
-
+margin-top:50px;
 }
 
 .year{
-
 background:white;
 padding:40px;
 border-radius:10px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-text-align:center;
-
+box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
-.big-number{
+.year h3{
+font-size:28px;
+}
 
-font-size:120px;
+.big{
+font-size:140px;
 font-weight:900;
 color:#d28c3c;
+margin-top:40px;
+}
 
+.map{
+margin-top:40px;
+width:80%;
+max-width:800px;
 }
 
 </style>
 
 </head>
 
+
 <body>
 
-
-<!-- HERO -->
+<!-- PORTADA -->
 
 <section class="hero">
 
-<div class="title">
+<h1>Propuesta Estratégica</h1>
 
-Propuesta Estratégica
-
-</div>
-
-<div class="subtitle">
-
-Representación Comercial de UNICASA  
-en Centroamérica y el Caribe
-
-</div>
+<p>Representación Comercial de UNICASA en Centroamérica y el Caribe</p>
 
 <div class="logos">
 
 <img src="dycons.jpg">
-
 <img src="outwork.png">
-
 <img src="logo_dellanno.png">
 
 </div>
@@ -194,34 +160,26 @@ en Centroamérica y el Caribe
 </section>
 
 
-<!-- INTRODUCCION -->
+<!-- INTRO -->
 
 <section>
 
-<div class="section-title">
+<h2>Alianza Comercial Estratégica</h2>
 
-Alianza Comercial Estratégica
+<p>
 
-</div>
+DYCONS GROUP y OUTWORK presentan una propuesta estratégica para introducir las marcas de UNICASA en Costa Rica y República Dominicana, desarrollando mercado residencial, showrooms especializados y distribución comercial.
 
-<div class="description">
-
-DYCONS GROUP y OUTWORK presentan una propuesta de expansión comercial para las marcas de UNICASA en Costa Rica y República Dominicana, enfocada en proyectos residenciales, showrooms especializados y desarrollo del mercado regional.
-
-</div>
+</p>
 
 </section>
 
 
-<!-- MARCAS -->
+<!-- PORTAFOLIO -->
 
 <section>
 
-<div class="section-title">
-
-Portafolio de Marcas UNICASA
-
-</div>
+<h2>Portafolio de Marcas UNICASA</h2>
 
 <div class="brands">
 
@@ -254,21 +212,28 @@ Portafolio de Marcas UNICASA
 </section>
 
 
+<!-- MAPA -->
+
+<section>
+
+<h2>Expansión Regional</h2>
+
+<p>
+
+Desarrollo estratégico de mercado en Costa Rica y República Dominicana como puerta de entrada a Centroamérica y el Caribe.
+
+</p>
+
+<img class="map" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Central_America_map.svg/1200px-Central_America_map.svg.png">
+
+</section>
+
+
 <!-- COSTOS DE VENTA -->
 
 <section>
 
-<div class="section-title">
-
-Estructura de Costos de Venta
-
-</div>
-
-<div class="description">
-
-Distribución logística de importación basada en la estructura financiera de la operación.
-
-</div>
+<h2>Estructura de Costos de Importación</h2>
 
 <div id="costos" class="chart"></div>
 
@@ -279,17 +244,7 @@ Distribución logística de importación basada en la estructura financiera de l
 
 <section>
 
-<div class="section-title">
-
-Estructura Operativa del Negocio
-
-</div>
-
-<div class="description">
-
-Distribución porcentual de los costos y utilidades dentro de la operación comercial.
-
-</div>
+<h2>Estructura Financiera de la Operación</h2>
 
 <div id="estructura" class="chart"></div>
 
@@ -300,11 +255,7 @@ Distribución porcentual de los costos y utilidades dentro de la operación come
 
 <section>
 
-<div class="section-title">
-
-Business Plan — 3 Años
-
-</div>
+<h2>Business Plan — 3 Años</h2>
 
 <div class="timeline">
 
@@ -345,30 +296,17 @@ Consolidación regional
 
 <section>
 
-<div class="section-title">
+<h2>Compromiso Comercial</h2>
 
-Compromiso Comercial
+<div class="big">500+</div>
 
-</div>
-
-<div class="big-number">
-
-500+
-
-</div>
-
-<div class="description">
-
-Objetivo mínimo anual de unidades comercializadas combinando todas las marcas de UNICASA.
-
-</div>
+<p>Unidades anuales proyectadas combinando todas las marcas UNICASA.</p>
 
 </section>
 
 
 
 <script>
-
 
 var costos = echarts.init(document.getElementById('costos'));
 
@@ -380,28 +318,27 @@ series:[{
 
 type:'pie',
 
-radius:['30%','70%'],
+radius:['35%','70%'],
 
 data:[
 
-{value:33,name:'Mercadería (Contenedor)'},
+{value:33,name:'Costo de Mercadería (Contenedor)'},
 
-{value:4,name:'Flete Internacional'},
+{value:4,name:'Estimación Flete'},
 
-{value:1,name:'Seguro Logístico 2%'},
+{value:1,name:'Seguro Aproximado 2%'},
 
-{value:4,name:'DAI Aranceles'},
+{value:4,name:'DAI Derechos Arancelarios'},
 
-{value:1,name:'Ley 6946'},
+{value:1,name:'Ley 6946 1%'},
 
-{value:3,name:'Costos Portuarios'}
+{value:3,name:'Costos Portuarios / Logísticos'}
 
 ]
 
 }]
 
 });
-
 
 
 var estructura = echarts.init(document.getElementById('estructura'));
@@ -418,17 +355,17 @@ radius:['35%','70%'],
 
 data:[
 
-{value:13,name:'Impuestos 13%'},
-
-{value:7,name:'Mano de Obra 7%'},
-
 {value:44,name:'Utilidad Bruta 44%'},
 
-{value:11,name:'Arrendamientos 11%'},
+{value:24,name:'Utilidad de Operación 24%'},
+
+{value:13,name:'Impuestos 13%'},
 
 {value:13,name:'Otros Gastos 13%'},
 
-{value:24,name:'Utilidad de Operación 24%'}
+{value:11,name:'Arrendamientos Locales 11%'},
+
+{value:7,name:'Mano de Obra 7%'}
 
 ]
 
@@ -440,5 +377,4 @@ data:[
 
 
 </body>
-
 </html>
