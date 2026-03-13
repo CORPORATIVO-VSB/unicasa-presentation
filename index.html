@@ -5,10 +5,93 @@
 <meta charset="UTF-8">
 <title>Alianza Estratégica UNICASA</title>
 
-<link rel="stylesheet" href="estilo.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="graficos.js" defer></script>
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#ffffff;
+color:#222;
+}
+
+section{
+padding:100px 10%;
+}
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background-image:url(dellanno.jpg);
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:10px;
+}
+
+.hero h2{
+font-weight:300;
+}
+
+.marcas{
+background:#f5f5f5;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+margin-top:50px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+padding:20px;
+text-align:center;
+}
+
+.card img{
+width:100%;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+h2{
+text-align:center;
+font-size:40px;
+}
+
+canvas{
+max-width:700px;
+margin:40px auto;
+display:block;
+}
+
+.estrategia{
+background:#f5f5f5;
+text-align:center;
+font-size:22px;
+}
+
+.compromiso{
+text-align:center;
+font-size:28px;
+}
+
+</style>
 
 </head>
 
@@ -16,32 +99,21 @@
 
 <section class="hero">
 
-<div class="hero-contenido">
-
 <h1>ALIANZA ESTRATÉGICA</h1>
+
 <h2>UNICASA • DYCONS GROUP • OUTWORK</h2>
 
 <p>
 Expansión Comercial en Costa Rica y República Dominicana
 </p>
 
-</div>
-
-<div class="logos">
-
-<img src="logo_dycons.jpg">
-<img src="logo_outwork.jpg">
-
-</div>
-
 </section>
-
 
 <section class="marcas">
 
 <h2>Portafolio de Marcas</h2>
 
-<div class="grid-marcas">
+<div class="grid">
 
 <div class="card">
 
@@ -49,12 +121,9 @@ Expansión Comercial en Costa Rica y República Dominicana
 
 <h3>Casa Brasileira</h3>
 
-<p>
-Segmento económico enfocado en proyectos residenciales masivos.
-</p>
+<p>Segmento económico enfocado en proyectos residenciales masivos.</p>
 
 </div>
-
 
 <div class="card">
 
@@ -62,12 +131,9 @@ Segmento económico enfocado en proyectos residenciales masivos.
 
 <h3>New</h3>
 
-<p>
-Diseño contemporáneo orientado al mercado medio.
-</p>
+<p>Diseño contemporáneo orientado al mercado medio.</p>
 
 </div>
-
 
 <div class="card">
 
@@ -75,9 +141,7 @@ Diseño contemporáneo orientado al mercado medio.
 
 <h3>DellAnno</h3>
 
-<p>
-Marca premium para proyectos residenciales de alto nivel.
-</p>
+<p>Marca premium para proyectos residenciales de alto nivel.</p>
 
 </div>
 
@@ -85,48 +149,45 @@ Marca premium para proyectos residenciales de alto nivel.
 
 </section>
 
-
-<section class="graficos">
+<section>
 
 <h2>Segmentación del Mercado</h2>
 
-<canvas id="graficoMercado"></canvas>
+<canvas id="mercado"></canvas>
 
 </section>
 
-
-<section class="graficos">
+<section>
 
 <h2>Distribución Proyectada de Ventas</h2>
 
-<canvas id="graficoVentas"></canvas>
+<canvas id="ventas"></canvas>
 
 </section>
 
+<section>
 
-<section class="graficos">
+<h2>Estructura de Costos</h2>
 
-<h2>Estructura de Costos de Importación</h2>
-
-<canvas id="graficoCostos"></canvas>
+<canvas id="costos"></canvas>
 
 </section>
-
 
 <section class="estrategia">
 
 <h2>Estrategia de Expansión</h2>
 
 <p>
-Año 1: Introducción y posicionamiento en el mercado.
-<br><br>
-Año 2: Apertura de showroom multimarca.
-<br><br>
-Año 3: Apertura de showroom DellAnno.
+
+Año 1 — Introducción y posicionamiento de marca<br><br>
+
+Año 2 — Apertura de showroom multimarca<br><br>
+
+Año 3 — Showroom DellAnno
+
 </p>
 
 </section>
-
 
 <section class="compromiso">
 
@@ -134,16 +195,69 @@ Año 3: Apertura de showroom DellAnno.
 
 <p>
 
-Objetivo de ventas superior a
-
-<strong>500 unidades anuales</strong>
-
-de productos UNICASA.
+Más de <strong>500 unidades anuales</strong> de productos UNICASA
 
 </p>
 
 </section>
 
+<script>
+
+new Chart(document.getElementById('mercado'),{
+type:'pie',
+data:{
+labels:[
+'Casa Brasileira 45%',
+'New 40%',
+'DellAnno 15%'
+],
+datasets:[{
+data:[45,40,15],
+backgroundColor:['#c89b5a','#777','#333']
+}]
+}
+});
+
+new Chart(document.getElementById('ventas'),{
+type:'bar',
+data:{
+labels:['Casa Brasileira','New','DellAnno'],
+datasets:[{
+label:'Distribución de ventas %',
+data:[40,35,25],
+backgroundColor:'#c89b5a'
+}]
+}
+});
+
+new Chart(document.getElementById('costos'),{
+type:'pie',
+data:{
+labels:[
+'Producto 58%',
+'Flete 7%',
+'Seguro 2%',
+'Aranceles 8%',
+'Logística 5%',
+'Administración 5%',
+'Margen 15%'
+],
+datasets:[{
+data:[58,7,2,8,5,5,15],
+backgroundColor:[
+'#c89b5a',
+'#999',
+'#777',
+'#444',
+'#555',
+'#666',
+'#222'
+]
+}]
+}
+});
+
+</script>
 
 </body>
 </html>
