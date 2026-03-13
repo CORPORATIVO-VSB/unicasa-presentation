@@ -2,19 +2,20 @@
 <html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
 <title>Alianza Estratégica UNICASA</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 
 <style>
 
 body{
 margin:0;
-font-family:'Poppins',sans-serif;
-background:#ffffff;
+font-family:'Montserrat',sans-serif;
+background:white;
 color:#222;
 }
 
@@ -22,242 +23,383 @@ section{
 padding:100px 10%;
 }
 
+h1{
+font-size:64px;
+font-weight:800;
+}
+
+h2{
+font-size:40px;
+margin-bottom:40px;
+}
+
 .hero{
-height:90vh;
+height:95vh;
+background-image:url(DELLANNO.jpg);
+background-size:cover;
+background-position:center;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background-image:url(dellanno.jpg);
-background-size:cover;
-background-position:center;
 color:white;
 }
 
-.hero h1{
-font-size:60px;
-margin-bottom:10px;
+.overlay{
+background:rgba(0,0,0,0.5);
+padding:80px;
+border-radius:10px;
 }
 
-.hero h2{
-font-weight:300;
+.logos{
+display:flex;
+gap:40px;
+justify-content:center;
+margin-top:40px;
 }
 
-.marcas{
-background:#f5f5f5;
+.logos img{
+height:70px;
 }
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:40px;
-margin-top:50px;
 }
 
 .card{
+box-shadow:0 15px 35px rgba(0,0,0,0.1);
+border-radius:10px;
+overflow:hidden;
 background:white;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-padding:20px;
-text-align:center;
 }
 
 .card img{
 width:100%;
-border-radius:8px;
-margin-bottom:10px;
 }
 
-h2{
-text-align:center;
-font-size:40px;
+.card h3{
+padding:20px;
+font-size:24px;
 }
 
-canvas{
-max-width:700px;
-margin:40px auto;
-display:block;
+.chart{
+width:100%;
+height:500px;
 }
 
-.estrategia{
+.dark{
 background:#f5f5f5;
-text-align:center;
-font-size:22px;
 }
 
-.compromiso{
+.timeline{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
 text-align:center;
-font-size:28px;
+}
+
+.year{
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.big-number{
+font-size:80px;
+font-weight:800;
+color:#c89b5a;
+}
+
+footer{
+text-align:center;
+padding:80px;
+font-size:20px;
 }
 
 </style>
 
 </head>
 
+
 <body>
 
+<!-- HERO -->
+
 <section class="hero">
+
+<div class="overlay">
 
 <h1>ALIANZA ESTRATÉGICA</h1>
 
 <h2>UNICASA • DYCONS GROUP • OUTWORK</h2>
 
-<p>
-Expansión Comercial en Costa Rica y República Dominicana
-</p>
+<p>Expansión Comercial en Costa Rica y República Dominicana</p>
+
+<div class="logos">
+
+<img src="WhatsApp Image 2026-02-28 at 6.49.55 PM.jpeg">
+
+<img src="Logo OutWork.png">
+
+<img src="icone-dellano.png">
+
+</div>
+
+</div>
 
 </section>
 
-<section class="marcas">
 
-<h2>Portafolio de Marcas</h2>
+<!-- MARCAS -->
+
+<section>
+
+<h2>Portafolio de Marcas UNICASA</h2>
 
 <div class="grid">
 
 <div class="card">
-
-<img src="casa.jpg">
-
-<h3>Casa Brasileira</h3>
-
-<p>Segmento económico enfocado en proyectos residenciales masivos.</p>
-
+<img src="CASA BRASILERA.jpg">
+<h3>Casa Brasileira — Segmento económico</h3>
 </div>
 
 <div class="card">
-
-<img src="nuevo.jpg">
-
-<h3>New</h3>
-
-<p>Diseño contemporáneo orientado al mercado medio.</p>
-
+<img src="THENEW.jpg">
+<h3>The New — Segmento medio</h3>
 </div>
 
 <div class="card">
-
-<img src="dellanno.jpg">
-
-<h3>DellAnno</h3>
-
-<p>Marca premium para proyectos residenciales de alto nivel.</p>
-
+<img src="DELLANNO.jpg">
+<h3>DellAnno — Segmento premium</h3>
 </div>
 
 </div>
 
 </section>
 
-<section>
+
+<!-- MERCADO -->
+
+<section class="dark">
 
 <h2>Segmentación del Mercado</h2>
 
-<canvas id="mercado"></canvas>
+<div id="mercado" class="chart"></div>
 
 </section>
+
+
+<!-- COSTOS -->
 
 <section>
 
-<h2>Distribución Proyectada de Ventas</h2>
+<h2>Estructura de Costos (Porcentual)</h2>
 
-<canvas id="ventas"></canvas>
+<div id="costos" class="chart"></div>
 
 </section>
+
+
+<!-- COMPARACION -->
+
+<section class="dark">
+
+<h2>Comparación Operativa</h2>
+
+<div id="paises" class="chart"></div>
+
+</section>
+
+
+<!-- BUSINESS PLAN -->
 
 <section>
 
-<h2>Estructura de Costos</h2>
+<h2>Business Plan — 3 Años</h2>
 
-<canvas id="costos"></canvas>
+<div class="timeline">
+
+<div class="year">
+
+<h3>Año 1</h3>
+
+<p>Introducción de marca</p>
+
+<p>Desarrollo comercial</p>
+
+<p>Proyectos residenciales</p>
+
+</div>
+
+<div class="year">
+
+<h3>Año 2</h3>
+
+<p>Apertura showroom multimarca</p>
+
+<p>Expansión comercial</p>
+
+</div>
+
+<div class="year">
+
+<h3>Año 3</h3>
+
+<p>Showroom DellAnno</p>
+
+<p>Consolidación de mercado</p>
+
+</div>
+
+</div>
 
 </section>
 
-<section class="estrategia">
 
-<h2>Estrategia de Expansión</h2>
+<!-- COMPROMISO -->
 
-<p>
-
-Año 1 — Introducción y posicionamiento de marca<br><br>
-
-Año 2 — Apertura de showroom multimarca<br><br>
-
-Año 3 — Showroom DellAnno
-
-</p>
-
-</section>
-
-<section class="compromiso">
+<section class="dark">
 
 <h2>Compromiso Comercial</h2>
 
-<p>
+<div class="big-number">500+</div>
 
-Más de <strong>500 unidades anuales</strong> de productos UNICASA
-
-</p>
+<p>Productos anuales combinados entre todas las marcas</p>
 
 </section>
 
+
+<!-- BENEFICIOS -->
+
+<section>
+
+<h2>Beneficios para UNICASA</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Expansión Caribe y Centroamérica</h3>
+</div>
+
+<div class="card">
+<h3>Incremento de ventas internacionales</h3>
+</div>
+
+<div class="card">
+<h3>Showroom estratégico en la región</h3>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<strong>UNICASA • DYCONS GROUP • OUTWORK</strong>
+
+<br><br>
+
+Alianza estratégica para el desarrollo del mercado de cocinas modulares en Centroamérica y el Caribe.
+
+</footer>
+
+
+
 <script>
 
-new Chart(document.getElementById('mercado'),{
-type:'pie',
-data:{
-labels:[
-'Casa Brasileira 45%',
-'New 40%',
-'DellAnno 15%'
-],
-datasets:[{
-data:[45,40,15],
-backgroundColor:['#c89b5a','#777','#333']
-}]
-}
-});
+var mercado = echarts.init(document.getElementById('mercado'));
 
-new Chart(document.getElementById('ventas'),{
-type:'bar',
-data:{
-labels:['Casa Brasileira','New','DellAnno'],
-datasets:[{
-label:'Distribución de ventas %',
-data:[40,35,25],
-backgroundColor:'#c89b5a'
-}]
-}
-});
+mercado.setOption({
 
-new Chart(document.getElementById('costos'),{
+tooltip:{},
+
+series:[{
+
 type:'pie',
-data:{
-labels:[
-'Producto 58%',
-'Flete 7%',
-'Seguro 2%',
-'Aranceles 8%',
-'Logística 5%',
-'Administración 5%',
-'Margen 15%'
-],
-datasets:[{
-data:[58,7,2,8,5,5,15],
-backgroundColor:[
-'#c89b5a',
-'#999',
-'#777',
-'#444',
-'#555',
-'#666',
-'#222'
+
+radius:'70%',
+
+data:[
+
+{value:45,name:'Casa Brasileira 45%'},
+
+{value:35,name:'The New 35%'},
+
+{value:20,name:'DellAnno 20%'}
+
 ]
+
 }]
+
+});
+
+
+var costos = echarts.init(document.getElementById('costos'));
+
+costos.setOption({
+
+tooltip:{},
+
+xAxis:{type:'category',data:['Producto','Logística','Aranceles','Operación','Marketing','Margen']},
+
+yAxis:{type:'value'},
+
+series:[{
+
+data:[58,8,7,12,5,10],
+
+type:'bar'
+
+}]
+
+});
+
+
+var paises = echarts.init(document.getElementById('paises'));
+
+paises.setOption({
+
+tooltip:{},
+
+legend:{},
+
+xAxis:{type:'category',data:['Logística','Impuestos','Operación']},
+
+yAxis:{type:'value'},
+
+series:[
+
+{
+
+name:'Costa Rica',
+
+type:'bar',
+
+data:[7,12,10]
+
+},
+
+{
+
+name:'República Dominicana',
+
+type:'bar',
+
+data:[8,15,9]
+
 }
+
+]
+
 });
 
 </script>
+
 
 </body>
 </html>
