@@ -1,19 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Alianza Estratégica UNICASA</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+<head>
+
+<meta charset="UTF-8">
+
+<title>Propuesta Estratégica UNICASA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 
 <style>
 
 body{
 margin:0;
-font-family:'Montserrat',sans-serif;
-background:#ffffff;
+font-family:Montserrat;
+background:white;
 color:#111;
 overflow-x:hidden;
 }
@@ -27,32 +30,57 @@ align-items:center;
 padding:80px 8%;
 }
 
-h1{font-size:70px;font-weight:800;margin:0}
-h2{font-size:44px;margin-bottom:40px;text-align:center}
-p{font-size:20px;max-width:900px;text-align:center}
-
 .hero{
 background:url(dellanno.jpg) center/cover no-repeat;
 color:white;
 }
 
 .overlay{
-background:rgba(0,0,0,0.55);
+background:rgba(0,0,0,0.6);
 padding:80px;
-border-radius:12px;
+border-radius:10px;
 text-align:center;
+}
+
+.title{
+font-family:"Playfair Display";
+font-size:70px;
+margin-bottom:20px;
+}
+
+.subtitle{
+font-size:28px;
+margin-bottom:40px;
 }
 
 .logos{
 display:flex;
 justify-content:center;
 gap:80px;
-margin-top:40px;
 flex-wrap:wrap;
 }
 
 .logos img{
-height:120px;
+height:150px;
+transition:0.4s;
+}
+
+.logos img:hover{
+transform:scale(1.15);
+}
+
+.section-title{
+font-family:"Playfair Display";
+font-size:48px;
+margin-bottom:30px;
+text-align:center;
+}
+
+.description{
+font-size:20px;
+max-width:900px;
+text-align:center;
+margin-bottom:40px;
 }
 
 .brands{
@@ -63,10 +91,9 @@ width:100%;
 }
 
 .brand{
-box-shadow:0 20px 40px rgba(0,0,0,0.12);
-border-radius:12px;
+box-shadow:0 15px 40px rgba(0,0,0,0.12);
+border-radius:10px;
 overflow:hidden;
-background:white;
 }
 
 .brand img{
@@ -76,13 +103,13 @@ object-fit:cover;
 }
 
 .brand h3{
-font-size:28px;
 padding:20px;
+font-size:26px;
 }
 
 .chart{
 width:100%;
-height:600px;
+height:550px;
 }
 
 .dark{
@@ -98,33 +125,38 @@ width:100%;
 
 .year{
 background:white;
-padding:50px;
-border-radius:12px;
-box-shadow:0 15px 35px rgba(0,0,0,0.1);
+padding:40px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
 text-align:center;
 }
 
-.big{
+.big-number{
 font-size:110px;
-font-weight:800;
+font-weight:900;
 color:#c89b5a;
 }
 
 </style>
+
 </head>
 
-
 <body>
+
+<!-- HERO -->
 
 <section class="hero">
 
 <div class="overlay">
 
-<h1>ALIANZA ESTRATÉGICA</h1>
+<div class="title">Propuesta Estratégica</div>
 
-<h2>UNICASA • DYCONS GROUP • OUTWORK</h2>
+<div class="subtitle">
 
-<p>Expansión Comercial en Costa Rica y República Dominicana</p>
+Representación Comercial de UNICASA  
+en Centroamérica y el Caribe
+
+</div>
 
 <div class="logos">
 
@@ -139,25 +171,51 @@ color:#c89b5a;
 </section>
 
 
+<!-- INTRODUCCION -->
+
 <section>
 
-<h2>Portafolio de Marcas UNICASA</h2>
+<div class="section-title">Alianza Comercial Estratégica</div>
+
+<div class="description">
+
+DYCONS GROUP y OUTWORK presentan una propuesta estratégica para introducir las marcas de UNICASA en Costa Rica y República Dominicana mediante una estructura de representación comercial enfocada en proyectos residenciales, distribución especializada y desarrollo de showrooms.
+
+</div>
+
+</section>
+
+
+<!-- MARCAS -->
+
+<section class="dark">
+
+<div class="section-title">Portafolio de Marcas</div>
 
 <div class="brands">
 
 <div class="brand">
+
 <img src="casa.jpg">
+
 <h3>Casa Brasileira — Segmento Económico</h3>
+
 </div>
 
 <div class="brand">
+
 <img src="new.jpg">
+
 <h3>The New — Segmento Medio</h3>
+
 </div>
 
 <div class="brand">
+
 <img src="dellanno.jpg">
+
 <h3>DellAnno — Segmento Premium</h3>
+
 </div>
 
 </div>
@@ -165,69 +223,79 @@ color:#c89b5a;
 </section>
 
 
-<section class="dark">
-
-<h2>Segmentación del Mercado</h2>
-
-<p>
-Distribución estimada del mercado de cocinas modulares en los segmentos económico,
-medio y premium dentro de la región.
-</p>
-
-<div id="mercado" class="chart"></div>
-
-</section>
-
+<!-- COSTOS -->
 
 <section>
 
-<h2>Estructura de Costos de Importación</h2>
+<div class="section-title">Estructura de Costos de Importación</div>
 
-<p>
-Modelo porcentual basado en costos logísticos, operación comercial y margen proyectado.
-</p>
+<div class="description">
+
+Distribución porcentual basada en la estructura financiera real de operación logística e importación.
+
+</div>
 
 <div id="costos" class="chart"></div>
 
 </section>
 
 
+<!-- MERCADO -->
+
 <section class="dark">
 
-<h2>Comparación Operativa entre Países</h2>
+<div class="section-title">Segmentación de Mercado</div>
 
-<p>
-Comparativo porcentual de operación logística y fiscal entre Costa Rica y República Dominicana.
-</p>
+<div id="mercado" class="chart"></div>
+
+</section>
+
+
+<!-- PAISES -->
+
+<section>
+
+<div class="section-title">Comparación Operativa por País</div>
 
 <div id="paises" class="chart"></div>
 
 </section>
 
 
-<section>
+<!-- BUSINESS PLAN -->
 
-<h2>Business Plan — 3 Años</h2>
+<section class="dark">
+
+<div class="section-title">Business Plan 3 Años</div>
 
 <div class="timeline">
 
 <div class="year">
+
 <h3>Año 1</h3>
-<p>Introducción de marca</p>
-<p>Desarrollo comercial</p>
-<p>Primeros proyectos</p>
+
+Introducción de marca  
+Desarrollo comercial  
+Primeros proyectos
+
 </div>
 
 <div class="year">
+
 <h3>Año 2</h3>
-<p>Apertura showroom multimarca</p>
-<p>Expansión comercial</p>
+
+Apertura showroom multimarca  
+Expansión comercial
+
 </div>
 
 <div class="year">
+
 <h3>Año 3</h3>
-<p>Showroom DellAnno</p>
-<p>Consolidación regional</p>
+
+Showroom DellAnno  
+Consolidación regional
+
 </div>
 
 </div>
@@ -235,65 +303,107 @@ Comparativo porcentual de operación logística y fiscal entre Costa Rica y Rep�
 </section>
 
 
-<section class="dark">
+<!-- COMPROMISO -->
 
-<h2>Compromiso Comercial</h2>
+<section>
 
-<div class="big">500+</div>
+<div class="section-title">Compromiso Comercial</div>
 
-<p>Unidades anuales proyectadas combinando todas las marcas UNICASA.</p>
+<div class="big-number">500+</div>
+
+<div class="description">
+
+Objetivo mínimo anual de productos UNICASA combinando todas las marcas dentro de los mercados de Costa Rica y República Dominicana.
+
+</div>
 
 </section>
-
 
 
 <script>
 
-var mercado = echarts.init(document.getElementById('mercado'));
-
-mercado.setOption({
-tooltip:{},
-series:[{
-type:'pie',
-radius:['30%','70%'],
-roseType:'radius',
-data:[
-{value:45,name:'Casa Brasileira — 45%'},
-{value:35,name:'The New — 35%'},
-{value:20,name:'DellAnno — 20%'}
-]
-}]
-});
-
-
 var costos = echarts.init(document.getElementById('costos'));
 
 costos.setOption({
+
 tooltip:{},
-xAxis:{type:'category',data:['Producto','Logística','Arancel','Operación','Marketing','Margen']},
-yAxis:{type:'value'},
+
 series:[{
-type:'bar',
-data:[58,8,7,12,5,10],
-itemStyle:{color:'#c89b5a'}
+
+type:'pie',
+
+radius:['30%','70%'],
+
+data:[
+
+{value:33.17,name:'Mercadería (33.17%)'},
+
+{value:3.67,name:'Flete Internacional (3.67%)'},
+
+{value:0.66,name:'Seguro Logístico (0.66%)'},
+
+{value:3.75,name:'DAI Aranceles (3.75%)'},
+
+{value:0.38,name:'Ley 6946 (0.38%)'},
+
+{value:2.5,name:'Costos Portuarios (2.5%)'}
+
+]
+
 }]
+
+});
+
+
+var mercado = echarts.init(document.getElementById('mercado'));
+
+mercado.setOption({
+
+series:[{
+
+type:'pie',
+
+radius:['30%','70%'],
+
+data:[
+
+{value:45,name:'Casa Brasileira 45%'},
+
+{value:35,name:'The New 35%'},
+
+{value:20,name:'DellAnno 20%'}
+
+]
+
+}]
+
 });
 
 
 var paises = echarts.init(document.getElementById('paises'));
 
 paises.setOption({
+
 tooltip:{},
+
 legend:{},
+
 xAxis:{type:'category',data:['Logística','Impuestos','Operación']},
+
 yAxis:{type:'value'},
+
 series:[
+
 {name:'Costa Rica',type:'bar',data:[7,12,10]},
+
 {name:'República Dominicana',type:'bar',data:[8,15,9]}
+
 ]
+
 });
 
 </script>
 
 </body>
+
 </html>
